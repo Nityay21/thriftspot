@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="section-navbar">
+      <section class="top_txt">
+        <div class="head container">
+          <div class="head_txt">
+            <p>Welcome to thrift store!</p>
+          </div>
+          <div class="sign_in_up">
+            <a href="#">SIGN IN</a>
+            <a href="#"> SIGN UP</a>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="nav-brand">
+          <a href="index.html"
+            ><img src="logo.jpg" class="logo" width="80%" height="auto"
+          /></a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="/" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown" >
+              <a href="/" class="nav-link dropbtn">Products</a>
+              <div class="dropdown-content">
+                <a href="#Grade A">Grade A</a>
+                <a href="#Grade B">Grade B</a>
+                <a href="#Grade C">Grade C</a>
+                
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="addToCart.html"
+                class="nav-link add-to-cart-button"
+                id="cartValue"
+                ><i class="fa-solid fa-cart-shopping">0</i></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!--home hero section-->
+    <main>
+      <section class="section-hero">
+        <div class="container grid grid-two--cols">
+          <div class="section-hero--content">
+            <p class="hero-subheading">Explore the Newly Released</p>
+            <h1 class="hero-heading">
+              Get Yourself Styled in Our Latest Articles!
+            </h1>
+            <p class="hero-para">
+              Welcome to THRIFTSPOT, your one spot thrift store. From Basic Tee
+              to Vintage collection, we have it all!
+            </p>
+            <div class="hero-btn">
+              <a href="/" class="btn"> Explore Latest Styles </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--end of hero section-->
+    <section class="section-extra-product">
+      <div class="container grid grid-three--cols">
+        <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>diwali sale</p>
+            <h3>10% off on varsity</h3>
+            <a href="#">Show now</a>
+          </div>
+          <div class="extra-img extra-varsity">
+            <img src="varsityvintage.jpeg" alt="varsity jacket" />
+          </div>
+        </div>
+        <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>Diwali Sale</p>
+            <h3>10% off on bottoms</h3>
+            <a href="#">Show now</a>
+          </div>
+          <div class="extra-img">
+            <img src="extrabottom.jpeg" alt="" />
+          </div>
+        </div>
+        <div class="div-extra grid grid-two--cols">
+          <div class="extra-text">
+            <p>Diwali Sale</p>
+            <h3>30% off on jerseys</h3>
+            <a href="#">Show now</a>
+          </div>
+          <div class="extra-img">
+            <img src="jersey1.jpg" alt="Real Madrid Jersey" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--end extra-->
+    <!--Start Policy-->
+    <section class="section-policy">
+      <div class="container grid grid-four--cols">
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>Countrywide Shipping</p>
+          </div>
+        </div>
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-rotate"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>Easy 7 Day Returns</p>
+            <p>On Few Products</p>
+          </div>
+        </div>
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>100% Money Back Guarantee</p>
+            <p>for 7 Days</p>
+          </div>
+        </div>
+        <div class="div-policy">
+          <div class="icons">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <div class="div-policy-text">
+            <p>Online Support</p>
+            <p>9-5 Business Day</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--end of policy-->
+    <!--Start Our Prodcut Section-->
+    <section class="section-product">
+      <div class="container"></div>
+      <h2 class="section-common--heading">Checkout ThriftSpot
+      </h2>
+      <section class="container">
+        <div id="productContainer"></div>        
+      </section>
+    </section>
+    <!--Start Product template section-->
+    <template id="productTemplate">
+      <div class="cards" id="cardValue">
+        <article class="information [card]">
+          <span class="category"></span>
+          <div class="imageContainer">
+            <img class="productImage" src="" alt=""/>
+          </div>
+          <h2 class="productName"> </h2>
+          <div class="productRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="productDescription"></p>
+
+          <div class="productPriceElement">
+            <p class="productPrice"></p>
+            <p class="productActualPrice"></p>
+          </div>
+          <div class="productStockElement">
+            <p class="productProperty">Total Stocks Available:</p>
+            <p class="productStock"></p>
+          </div>
+          <div class="productQuantityElement">
+            <p class="productProperty">Quantity(Pieces)</p>
+            <div class="stockElement">
+              <button class="cartIncrement">+</button>
+              <p class="productQuantity">1</p>
+              <button class="cartDecrement">-</button>
+            </div>
+          </div>
+          <button class="add-to-cart-button">
+            <i class="fa-solid fa-cart-shopping"></i>Add to Cart
+          </button>
+        </article>
+
+      </div>
+     
+    </template>
+    <!--End Product template section-->
+    
+    </div>
+
+    <!--End Our Prodcut Section-->
+    <!--Start of why choose us-->
+    <section class="section-why--choose">
+      <div class="container">
+        <h2 class="section-common--heading">Why Choose ThriftSpot</h2>
+        <p class="section-common--subheading">
+          At our thrift store, we pride ourselves on offering a unique shopping
+          experience that combines authenticity, quality, and affordability.
+          Here’s why you’ll love shopping with us:
+        </p>
+      </div>
+      <div class="container grid grid-three--cols">
+        <div class="choose-left-div text-align--right">
+          <div class="why-choose--div" data-aos="zoom-in-up" data-aos-delay="0">
+            <p class="common-text--highlight">1</p>
+            <h3 class="section-common--title">Wide Selection</h3>
+            <p>
+              Discover a range of styles at our thrift store, from varsity
+              jackets to unique graphic tees. Whether updating your wardrobe or
+              seeking rare finds, treasures await!
+            </p>
+          </div>
+          <div
+            class="why-choose--div"
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+          >
+            <p class="common-text--highlight">2</p>
+            <h3 class="section-common--title">Quality Assurance</h3>
+            <p>
+              Our thrift store uses a Grading System for quality transparency:
+              Grade A items are like-new, Grade B have minor flaws, and Grade C
+              may need repairs. This helps customers make informed choices.
+            </p>
+          </div>
+          <div
+            class="why-choose--div"
+            data-aos="zoom-in-up"
+            data-aos-delay="600"
+          >
+            <p class="common-text--highlight">3</p>
+            <h3 class="section-common--title">Competitive Prices</h3>
+            <p class="text-align--right">
+              We offer competitive prices at our thrift store, making quality
+              secondhand items affordable for everyone. Our low costs ensure
+              great deals while promoting sustainable shopping.
+            </p>
+          </div>
+        </div>
+        <div class="choose-center-div" data-aos="zoom-in" data-aos-delay="300">
+          <figure>
+            <img
+              src="home1.jpeg"
+              alt="ThriftSpot home Page"
+            />
+          </figure>
+        </div>
+        <div class="choose-right-div">
+          <div
+            class="why-choose--div text-align--left"
+            data-aos="zoom-in-up"
+            data-aos-delay="0"
+          >
+            <p class="common-text--highlight">4</p>
+            <h3 class="section-common--title text-align--left">
+              Feedback Driven
+            </h3>
+            <p>
+              Our thrift store is feedback-driven, using customer suggestions to
+              improve products and layout. By listening to shoppers, we enhance
+              the overall experience to better meet their needs.
+            </p>
+          </div>
+          <div
+            class="why-choose--div text-align--left"
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+          >
+            <p class="common-text--highlight">5</p>
+            <h3 class="section-common--title">Convenient Shopping</h3>
+            <p>
+              With ThriftSpot, shopping for clothing items is Easy and
+              Convenient. Our user-friendly website and secure payment options
+              ensure a seamless experience from browsing to checkout, all from
+              the comfort of our home.
+            </p>
+          </div>
+          <div
+            class="why-choose--div text-align--left"
+            data-aos="zoom-in-up"
+            data-aos-delay="600"
+          >
+            <p class="common-text--highlight">6</p>
+            <h3 class="section-common--title">Excellent Service</h3>
+            <p>
+              ThriftSpot is dedicated to excellent service, offering prompt
+              assistance and efficient order handling. Your satisfaction is our
+              priority at every step.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="section-footer">
+      <div class="footer-container container">
+        <div class="content_1">
+          <img src="logo.jpg" alt="logo" />
+          <p>
+            Welcome to ThriftSpot, your ultimate destination for Thrifted
+            clothes!
+          </p>
+          <img src="cards.png" alt="cards" />
+        </div>
+        <div class="content_2">
+          <h4>SHOPPING</h4>
+          <a href="#">Accessories</a>
+          <a href="#">Sales & Discount</a>
+        </div>
+        <div class="content_3">
+          <h4>Experience</h4>
+          <a href="./contact.html">Contact Us</a>
+          <a href="" target="_blank">Payment Method</a>
+          <a href="" target="_blank">Delivery</a>
+          
+        </div>
+       
+          <hr />
+        </div>
+      </div>
+      
+      </div>
+    </footer>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
